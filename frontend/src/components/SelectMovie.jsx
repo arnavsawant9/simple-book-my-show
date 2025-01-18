@@ -1,5 +1,5 @@
 import React from 'react'
-import moviesList from '../data'
+import data from '../data'
 import RadioComponents from './RadioComponents'
 import '../css/SelectMovie.css'
 
@@ -9,7 +9,7 @@ const SelectMovie = () => {
     <>
     <h1 className='SM_heading'>Movies list</h1>
     <div className='SM_main_container'>
-        {moviesList.map((el,index)=>{
+        {data.moviesList.map((el,index)=>{
             return (<RadioComponents text={el} key={index} />)
         })}
     </div>

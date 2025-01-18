@@ -2,7 +2,9 @@ import React from 'react'
 
 const LastBookingDetails = () => {
   return (
-    <div>LastBookingDetails</div>
+    <div>
+    
+    </div>
   )
 }
 

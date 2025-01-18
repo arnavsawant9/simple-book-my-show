@@ -1,5 +1,8 @@
 import React from 'react'
 import SelectMovie from '../components/SelectMovie'
+import LastBookingDetails from '../components/LastBookingDetails'
+import TimeSchedule from '../components/TimeSchedule'
+import '../css/Home.css'
 
 const Home = () => {
   return (
@@ -9,12 +12,13 @@ const Home = () => {
             <SelectMovie />
         </div>
         <div className='last_booking_details_container'>
-          Last Booking
+          <LastBookingDetails />
         </div>
       </div>
       <div className='time_seats_container'>
-        Time schedule
-        Select seats
+        <TimeSchedule />
+        <SelectMovie />
+        <button className='BN-btn'>Book Now</button>
       </div>
     </div>
   )
