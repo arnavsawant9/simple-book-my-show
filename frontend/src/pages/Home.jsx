@@ -3,6 +3,7 @@ import SelectMovie from '../components/SelectMovie'
 import LastBookingDetails from '../components/LastBookingDetails'
 import TimeSchedule from '../components/TimeSchedule'
 import '../css/Home.css'
+import SelectSeats from '../components/SelectSeats'
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
         </div>
       </div>
       <div className='time_seats_container'>
+        <SelectSeats />
         <TimeSchedule />
         <SelectMovie />
         <button className='BN-btn'>Book Now</button>
