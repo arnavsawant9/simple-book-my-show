@@ -1,6 +1,7 @@
 import React from 'react'
-import seats from "../data"
+import {seats} from "../data"
 import SeatInput from './SeatInput'
+import "../css/SelectSeats.css"
 
 const SelectSeats = () => {
   return (
