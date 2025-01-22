@@ -4,13 +4,16 @@ import { useState } from 'react'
 import './App.css'
 import SelectMovie from './components/SelectMovie'
 import Home from './pages/Home'
+import BookMyShowState from './context/BookMyShowState'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <Home />
+      <BookMyShowState>
+        <Home />
+      </BookMyShowState>
     </>
   )
 }
