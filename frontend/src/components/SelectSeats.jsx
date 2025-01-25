@@ -6,13 +6,7 @@ import BookMyShowContext from '../context/BookMyShowContext'
 
 const SelectSeats = () => {
   const context = useContext(BookMyShowContext);
-  const {seat, setSeat} = context;
-
-  const handleChangeSeat = (val) =>{
-    setSeat(val);
-    //console.log(val);
-    localStorage.setItem("seats",val);
-  }
+  const {seatNumber, setSeatNumber} = context;
 
   return (
     <div className='SS_wrapper'>
@@ -20,7 +14,7 @@ const SelectSeats = () => {
       <div className='SS_main_container'>
         {seats.map((el,index)=>{
           return(
-            <SeatInput key={index} text={el} data={seat} changeSelection={handleChangeSeat} />
+            <SeatInput key={index} text={el} seatNumber={seatNumber} setSeatNumber={setSeatNumber}/>
           )
         })}
       </div>

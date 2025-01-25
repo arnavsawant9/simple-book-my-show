@@ -19,7 +19,7 @@ const Home = () => {
       <div className='time_seats_container'>
         <SelectSeats />
         <TimeSchedule />
-        <SelectMovie />
+        <SelectSeats />
         <button className='BN-btn'>Book Now</button>
       </div>
     </div>
