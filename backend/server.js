@@ -9,4 +9,7 @@ app.use(cors())
 app.use(express.json())
 connectDB()
 
-app.use("api",require('./routes'))
+app.use("/api",require('./routes'))
+
+const port = 8080;
+app.listen(port)

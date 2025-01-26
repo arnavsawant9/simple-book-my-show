@@ -1,5 +1,6 @@
-import React, {useState} from 'react'
+import React, {useState,useEffect} from 'react'
 import BookMyShowContext from './BookMyShowContext'
+//import { seats } from '../data'
 
 const BookMyShowState = (props) => {
     const [movie, setMovie] = useState('')
@@ -14,9 +15,12 @@ const BookMyShowState = (props) => {
       D2:""
     })
     const [lastBookingDetails, setLastBookingDetails] = useState(null)
+    const [errorPopup, setErrorPopup] = useState(false)
+    const [errorMessage, setErrorMessage] = useState("")
 
     const handlePostBooking = async() =>{  //here you are writing logic for post method
-      const response = await fetch(`http://localhost:8080`, {
+      console.log("hello i am running")
+      const response = await fetch(`http://localhost:8080/api`, {
         method: "Post",
         headers: {
           "Content-type": "application/json",
@@ -58,13 +62,13 @@ const BookMyShowState = (props) => {
       if(slot){
         setTime(slot)
       }
-      if(seat){
+      if(seats){
         setSeatNumber(seats)
       }
     },[])
 
   return (
-    <BookMyShowContext.Provider value={{movie,setMovie,seat,setSeat,time, setTime,seatNumber, setSeatNumber,lastBookingDetails, setLastBookingDetails}}>
+    <BookMyShowContext.Provider value={{movie,setMovie,seat,setSeat,time, setTime,seatNumber, setSeatNumber,lastBookingDetails, setLastBookingDetails, handleGetBooking, handlePostBooking,errorMessage,errorPopup, setErrorMessage, setErrorPopup}}>
         {props.children}
     </BookMyShowContext.Provider>
   )

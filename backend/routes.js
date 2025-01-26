@@ -7,7 +7,7 @@ const app = express()
 route.use(express.json())
 route.use(cors())
 
-route.post("/booking", async(req,res)=>{
+route.post("/", async(req,res)=>{
     const {movie,slot,seats} = req.body;
 
     try{
