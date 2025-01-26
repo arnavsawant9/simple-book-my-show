@@ -11,7 +11,7 @@ const LastBookingDetails = () => {
 
   return (
     <div className='last_booking_details_container_main'>
-      <h2 className='last_booking_details_header'>Last Booking</h2>
+      <h2 className='last_booking_details_header'>Last Booking Details</h2>
       {
         lastBookingDetails? (
           <>
