@@ -101,7 +101,7 @@ const Home = () => {
       <div className="time_seats_container">
         <SelectSeats key="top-seats" />
         <TimeSchedule />
-        <SelectSeats key="bottom-seats" />
+        {/* <SelectSeats key="bottom-seats" /> */}
         <button className="BN-btn" onClick={handleBookNow}>
           Book Now
         </button>
