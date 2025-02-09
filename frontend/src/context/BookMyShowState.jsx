@@ -20,7 +20,7 @@ const BookMyShowState = (props) => {
 
     const handlePostBooking = async() =>{  //here you are writing logic for post method
       console.log("hello i am running")
-      const response = await fetch(`http://localhost:8080/api`, {
+      const response = await fetch(`https://simple-book-my-show-backend.onrender.com`, {
         method: "Post",
         headers: {
           "Content-type": "application/json",
@@ -43,7 +43,7 @@ const BookMyShowState = (props) => {
     }
 
     const handleGetBooking = async() =>{
-      const response = await fetch(`http://localhost:8080/api/booking`, {
+      const response = await fetch(`https://simple-book-my-show-backend.onrender.com/booking`, {
         method: "Get"
       })
 
